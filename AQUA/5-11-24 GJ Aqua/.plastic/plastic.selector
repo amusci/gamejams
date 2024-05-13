@@ -1,0 +1,4 @@
+repository "5-11-24 GJ Aqua@BBSB_GAMES@cloud"
+  path "/"
+    br "/main"
+    co "/main"
