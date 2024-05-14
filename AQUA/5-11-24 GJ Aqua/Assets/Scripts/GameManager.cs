@@ -15,11 +15,10 @@ public class GameManager : MonoBehaviour
 
     public int currentScore; // current score
 
-    public int scorePerNote = 100; // score per note
+    public int scorePerNote = 300; // score per note
+    public int deductScore = 100;
 
     public Text scoreText;
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -58,8 +57,16 @@ public class GameManager : MonoBehaviour
     {
 
         Debug.Log("missed");
-        currentScore -= (scorePerNote / 2);
+        currentScore -= deductScore;
         scoreText.text = "Score: " + currentScore;
 
     }
+
+
+
+
 }
+
+
+
+

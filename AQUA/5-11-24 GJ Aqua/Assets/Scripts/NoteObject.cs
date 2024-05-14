@@ -26,6 +26,12 @@ public class NoteObject : MonoBehaviour
                 GameManager.instance.noteHit();
 
             }
+            if (canBePressed == false)
+            {
+
+                GameManager.instance.noteMiss();
+
+            }
 
         }
 
