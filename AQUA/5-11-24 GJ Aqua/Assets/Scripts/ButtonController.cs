@@ -9,6 +9,8 @@ public class ButtonController : MonoBehaviour
 
     public KeyCode keyToPress; // allow us to choose which key in inspector
 
+    public AudioClip hitSound; // allow us to choose which sound to play when hit
+
     void Start()
     /* Called before first frame */
     {
@@ -26,6 +28,7 @@ public class ButtonController : MonoBehaviour
         {
 
             spriteRenderer.sprite = pressedImage; // change the sprite to pressed sprite
+            PlayHitSound();
 
         }
         if (Input.GetKeyUp(keyToPress)) // when key is released
@@ -35,5 +38,14 @@ public class ButtonController : MonoBehaviour
 
         }
 
+    }
+
+    private void PlayHitSound()
+    {
+        if (hitSound != null)
+        {
+            // Play the assigned hit sound
+            AudioSource.PlayClipAtPoint(hitSound, transform.position);
+        }
     }
 }
