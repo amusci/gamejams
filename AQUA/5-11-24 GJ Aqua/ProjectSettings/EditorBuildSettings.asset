@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: cbf1623a5cb789e4bb0787a11dc85de7
   - enabled: 1
-    path: Assets/Scenes/Baby Shark.unity
+    path: Assets/Scenes/Lullaby.unity
     guid: d563fd4fd2d7ee640b45d880eeafb9f5
   - enabled: 1
     path: Assets/Scenes/Twinkle.unity
