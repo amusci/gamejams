@@ -23,20 +23,27 @@ public class ButtonController : MonoBehaviour
     void Update()
     /* Called once per frame */
     {
-
-        if (Input.GetKeyDown(keyToPress)) // if the key is pressed 
+        if (!PauseMenu.isPaused)
         {
 
-            spriteRenderer.sprite = pressedImage; // change the sprite to pressed sprite
-            PlayHitSound();
+            if (Input.GetKeyDown(keyToPress)) // if the key is pressed 
+            {
+
+                spriteRenderer.sprite = pressedImage; // change the sprite to pressed sprite
+                PlayHitSound();
+
+            }
+            if (Input.GetKeyUp(keyToPress)) // when key is released
+            {
+
+                spriteRenderer.sprite = defaultImage; // revert back to default sprite
+
+            }
+
 
         }
-        if (Input.GetKeyUp(keyToPress)) // when key is released
-        {
 
-            spriteRenderer.sprite = defaultImage; // revert back to default sprite
 
-        }
 
     }
 

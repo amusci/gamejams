@@ -16,20 +16,25 @@ public class NoteObject : MonoBehaviour
     void Update()
     /* Called every frame */
     {
-        if (Input.GetKeyDown(keyToPress)) // if key pressed
+        if (PauseMenu.isPaused == false)
         {
 
-            if (canBePressed == true) // if it can be pressed
+            if (Input.GetKeyDown(keyToPress)) // if key pressed
             {
 
-                gameObject.SetActive(false); // remove gameobject
-                GameManager.instance.noteHit();
+                if (canBePressed == true) // if it can be pressed
+                {
 
-            }
-            if (canBePressed == false)
-            {
+                    gameObject.SetActive(false); // remove gameobject
+                    GameManager.instance.noteHit();
 
-                GameManager.instance.noteMiss();
+                }
+                if (canBePressed == false)
+                {
+
+                    GameManager.instance.noteMiss();
+
+                }
 
             }
 
