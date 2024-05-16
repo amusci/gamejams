@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 166643264}
   - component: {fileID: 166643263}
   m_Layer: 5
-  m_Name: BabyShark
+  m_Name: Lullaby
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1346,7 +1346,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Baby Shark
+  m_Text: Lullaby
 --- !u!222 &1591426783
 CanvasRenderer:
   m_ObjectHideFlags: 0
