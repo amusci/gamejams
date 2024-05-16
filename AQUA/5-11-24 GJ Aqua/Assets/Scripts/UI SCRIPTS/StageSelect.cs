@@ -3,6 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class StageSelect : MonoBehaviour
 {
+
+
+    public void backToMainMenu()
+    {
+
+        SceneManager.LoadSceneAsync("Main Menu");
+
+    }
     public void Twinkle()
     {
 

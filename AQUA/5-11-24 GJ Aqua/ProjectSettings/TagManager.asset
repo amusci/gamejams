@@ -45,3 +45,6 @@ TagManager:
   - name: Note
     uniqueID: 3813692287
     locked: 0
+  - name: Aquarium
+    uniqueID: 4169416743
+    locked: 0
