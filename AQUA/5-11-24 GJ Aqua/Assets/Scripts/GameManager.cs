@@ -55,41 +55,17 @@ public class GameManager : MonoBehaviour
         Debug.Log("Hit on time");
         currentScore += scorePerNote;
         scoreText.text = "Score: " + currentScore;
-        if (currentWaterLevel >= 100)
-        {
-
-            currentWaterLevel = 100;
-
-        }
-        else
-        {
-
-            currentWaterLevel += waterLevelPerNote * 2;
-
-        }
-        Debug.Log(currentWaterLevel + "hit");
+        currentWaterLevel = Mathf.Clamp(currentWaterLevel + waterLevelPerNote * 2, 0, 100);
+        Debug.Log(currentWaterLevel + " hit");
     }
 
     public void noteMiss()
-    /* this function will be called when a note is missed */
     {
-
+        Debug.Log("Missed note");
         currentScore -= deductScore;
         scoreText.text = "Score: " + currentScore;
-        if (currentWaterLevel <= 10)
-        {
-
-            currentWaterLevel = 10;
-
-        }
-        else
-        {
-
-            currentWaterLevel -= waterLevelPerNote;
-
-        }
-        Debug.Log(currentWaterLevel + "miss");
-
+        currentWaterLevel = Mathf.Clamp(currentWaterLevel - waterLevelPerNote, 0, 100);
+        Debug.Log(currentWaterLevel + " miss");
     }
 
 
